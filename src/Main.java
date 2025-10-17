@@ -5,10 +5,11 @@ public class Main {
         firstMovie.releaseYear = 2001;
         firstMovie.movieDuration = 360;
 
-        firstMovie.showDataSheet();
         firstMovie.rate(8);
         firstMovie.rate(5);
         firstMovie.rate(10);
+
+        firstMovie.showDataSheet();
 
         System.out.println(firstMovie.totalRating);
         System.out.println(firstMovie.countRating);
