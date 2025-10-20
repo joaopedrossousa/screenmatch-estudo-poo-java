@@ -1,30 +1,64 @@
+package br.com.alura.screenmatch.models;
+
 public class Movie {
-    String movieName;
-    int releaseYear;
-    boolean planIncluded;
-    private double totalRating;
-    private int countRating;
-    int movieDuration;
 
-    int getCountRating() {
-        return countRating;
+    private String nome;
+    private int anoDeLancamento;
+    private int duracaoEmMinutos;
+    private boolean incluidoNoPlano;
+    private double somaDasAvaliacoes;
+    private int totalDeAvaliacoes;
+
+    public void exibeFichaTecnica() {
+        System.out.println("Nome do filme: " +nome);
+        System.out.println("Ano de lançamento: " +anoDeLancamento);
+        System.out.println("Duração em minutos: " +duracaoEmMinutos);
+        System.out.println("Incluído no plano: " +incluidoNoPlano);
     }
 
-    void showDataSheet(){
-        System.out.println("Nome do filme: " +movieName);
-        System.out.println("Ano de Lançamento: " +releaseYear);
-        System.out.println("Duração do Filme: " +movieDuration+ " minutos.");
-        System.out.println("Avaliação Média: %.1f".formatted(averageRating()));
-        System.out.println("Total de avaliações: " + getCountRating());
+    public void avalia(double nota) {
+        somaDasAvaliacoes += nota;
+        totalDeAvaliacoes++;
     }
 
-    void rate(double score){
-        totalRating += score;
-        countRating ++;
+    public double pegaMedia() {
+        return somaDasAvaliacoes / totalDeAvaliacoes;
     }
 
-    double averageRating(){
-        return totalRating / countRating;
+    public String getNome() {
+        return this.nome;
     }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    public int getAnoDeLancamento() {
+        return this.anoDeLancamento;
+    }
+
+    public void setAnoDeLancamento(int anoDeLancamento) {
+        this.anoDeLancamento = anoDeLancamento;
+    }
+
+    public boolean getIncluidoNoPlano() {
+        return this.incluidoNoPlano;
+    }
+
+    public void setIncluidoNoPlano(boolean incluidoNoPlano) {
+        this.incluidoNoPlano = incluidoNoPlano;
+    }
+
+    public int getDuracaoEmMinutos() {
+        return this.duracaoEmMinutos;
+    }
+
+    public void setDuracaoEmMinutos(int duracaoEmMinutos) {
+        this.duracaoEmMinutos = duracaoEmMinutos;
+    }
+
+    public int getTotalDeAvaliacoes() {
+        return this.totalDeAvaliacoes;
+    }
+
 }
-

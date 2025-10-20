@@ -1,19 +1,21 @@
+import br.com.alura.screenmatch.models.Movie;
+
 public class Main {
+
     public static void main(String[] args) {
-        Movie firstMovie = new Movie();
-        firstMovie.movieName = "Lord of Rings: The Fellowship of The Ring";
-        firstMovie.releaseYear = 2001;
-        firstMovie.movieDuration = 360;
+        Movie favorito = new Movie();
 
-        firstMovie.rate(8);
-        firstMovie.rate(5);
-        firstMovie.rate(10);
+        favorito.setNome("The Matrix");
+        favorito.setAnoDeLancamento(1999);
+        favorito.setDuracaoEmMinutos(135);
+        favorito.setIncluidoNoPlano(true);
 
-        firstMovie.showDataSheet();
+        favorito.exibeFichaTecnica();
+        favorito.avalia(9);
+        favorito.avalia(8);
+        favorito.avalia(9);
 
-        System.out.println(firstMovie.totalRating);
-        System.out.println(firstMovie.countRating);
-        System.out.println(firstMovie.averageRating());
-
+        System.out.println("Média de avaliações do filme: " +favorito.pegaMedia());
     }
+
 }
