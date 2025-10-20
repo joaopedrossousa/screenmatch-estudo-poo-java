@@ -2,8 +2,8 @@ public class Movie {
     String movieName;
     int releaseYear;
     boolean planIncluded;
-    double totalRating;
-    int countRating;
+    private double totalRating;
+    private int countRating;
     int movieDuration;
 
     void showDataSheet(){
