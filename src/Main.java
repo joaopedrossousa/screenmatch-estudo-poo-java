@@ -3,6 +3,23 @@ import br.com.alura.screenmatch.models.Serie;
 
 public class Main {
 
+    /*
+    Teste
+
+
+
+
+
+
+
+
+
+
+
+
+    
+     */
+
     public static void main(String[] args) {
         Movie favorito = new Movie();
 
