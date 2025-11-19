@@ -5,15 +5,17 @@ import br.com.alura.screenmatch.modelos.Serie;
 import br.com.alura.screenmatch.modelos.Titulo;
 
 import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Collections;
 
 public class PrincipalComListas {
     public static void main(String[] args) {
-        Filme meuFilme = new Filme("0 poderoso Chefão", 1970);
+        Filme meuFilme = new Filme("O poderoso Chefão", 1970);
         meuFilme.avalia(9);
         Filme outroFilme = new Filme("Avatar", 2023);
-        meuFilme.avalia(6);
+        outroFilme.avalia(6);
         var filmeLancamento = new Filme("Dracula",2026);
-        meuFilme.avalia(10);
+        filmeLancamento.avalia(10);
         Serie lost = new Serie("Lost", 2000);
 
         //Criação de um arraylist para os filmes
@@ -30,8 +32,28 @@ public class PrincipalComListas {
             }
         }
         System.out.println();
+        /*
         //Outra forma de utilizar o foreach
         lista.forEach(item -> System.out.println(item.getNome()));
+
+         */
+        ArrayList<String> buscaPorArtista = new ArrayList<>();
+
+        buscaPorArtista.add("Adam Sandler");
+        buscaPorArtista.add("Paulo");
+        buscaPorArtista.add("João");
+        System.out.println("Lista não ordenada: ");
+        System.out.println(buscaPorArtista);
+        System.out.println();
+
+        //Como ordenar uma lista
+        Collections.sort(buscaPorArtista);
+        System.out.println("Lista Ordenada: ");
+        System.out.println(buscaPorArtista);
+
+        Collections.sort(lista);
+        System.out.println(lista);
+
 
 
     }
