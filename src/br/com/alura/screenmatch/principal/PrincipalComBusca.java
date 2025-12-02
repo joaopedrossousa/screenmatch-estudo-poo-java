@@ -1,5 +1,6 @@
 package br.com.alura.screenmatch.principal;
 
+import br.com.alura.screenmatch.excecao.ErroDeConversaoDeAnoException;
 import br.com.alura.screenmatch.modelos.Titulo;
 import br.com.alura.screenmatch.modelos.TituloOMDB;
 import com.google.gson.FieldNamingPolicy;
@@ -65,7 +66,11 @@ public class PrincipalComBusca {
         } catch (IllegalArgumentException e){
             System.out.println("Erro na URL de busca da API, verifique o endereço...");
             System.out.println(e.getMessage());
+        //declarando exception criada;
+        } catch (ErroDeConversaoDeAnoException e){
+            System.out.println(e.getMessage());
         }
+
 
         System.out.println("Programa Executado Normalmente...");
     }
